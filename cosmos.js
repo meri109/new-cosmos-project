@@ -50,7 +50,6 @@ setPlanet('jupiter', 250, 2, 90);
 setPlanet('saturn', 320, 1.5, 20);
 setPlanet('uranus', 380, 1.2, 150);
 setPlanet('neptune', 430, 1, 70);
-// setPlanet('pluto', 480, 0.8, 160);
 setSatellite('moon','earth', 25, 5.8 , 200, 'clock' )
 
 screenWidth = window.innerWidth 
