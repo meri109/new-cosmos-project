@@ -55,7 +55,7 @@ setSatellite('moon','earth', 25, 5.8 , 200, 'clock' )
 screenWidth = window.innerWidth 
 screenHeight = window.innerHeight
 
-for (let i = 0; i < 350; i++){
+for (let i = 0; i < 450; i++){
     const star = document.createElement('div')
     star.classList.add('star')
     const x = Math.round(Math.random() * screenWidth)
