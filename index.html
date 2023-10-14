@@ -1,0 +1,230 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        body{
+            background-color: rgb(14, 13, 13);
+        }
+
+        #sun{
+            width: 75px;
+            height: 75px;
+            border-radius: 50%;
+            /* background-color: rgb(230, 207, 3); */
+            position: absolute;
+            transform: translate(-50%, -50%);
+            z-index: 6;
+            filter: drop-shadow(1px 1px 35px #c3beb072);
+
+        }
+        .planet, .satellite{
+            border-radius: 50%;
+            position: absolute;
+            transform: translate(-50%, -50%);
+            z-index: 5;
+
+        }
+        #mercury{
+        width: 15px;
+        height: 15px;
+        filter: drop-shadow(1px 1px 3px #bb9c3f72);
+    }
+    #venus{
+        width: 20px;
+        height: 20px;
+        filter: drop-shadow(1px 1px 3px #bb9c3f94);
+    }
+    #earth{
+        width: 30px;
+        height: 30px;
+    }
+    #moon{
+        width: 11px;
+        height: 11px;
+        filter: drop-shadow(1px 1px 2px #c3beb090);
+    }
+    #mars{
+        width: 22px;
+        height: 22px;
+        filter: drop-shadow(1px 1px 5px #b8430db9);
+    }
+    #jupiter{
+        width: 50px;
+        height: 50px;
+        filter: drop-shadow(2px 2px 5px #bb9c3fd1);
+    }
+    #saturn{
+        width: 45px;
+        height: 45px;
+        filter: drop-shadow(1px 1px 5px #bb9c3fc9);
+        overflow: visible;
+    }
+    #uranus{
+        width: 28px;
+        height: 28px;
+        filter: drop-shadow(1px 1px 5px #c3beb072);
+    }
+    #neptune{
+        width: 30px;
+        height: 30px;
+        filter: drop-shadow(1px 1px 5px #c3beb072);
+    }
+    #pluto{
+        width: 15px;
+        height: 15px;
+        filter: drop-shadow(1px 1px 5px #c3beb072);
+    }
+    @keyframes opacity-animation{
+        0%{
+            opacity: 10%;
+
+
+        }
+
+        100%{
+            opacity: 100%;
+            filter: drop-shadow(1px 1px 3px #fac52772);
+
+        }
+    }
+        .star{
+            width: 5px;
+            height: 5px;
+            border-radius: 50%;
+            background-color: rgb(226, 226, 109);
+            position: absolute;
+            opacity: 0;
+            animation-name: opacity-animation;
+            animation-duration: 2s;
+            animation-iteration-count: infinite;
+            animation-direction: alternate;
+            animation-timing-function: ease-in-out;
+            transition-duration: 2s;
+        }
+        @keyframes meteor-ani{
+            0%{
+                transform: rotate(-5deg);
+                filter: drop-shadow(-25px -25px 10px #f6facf72);
+
+            }
+
+            25%{
+                transform: rotate(5deg);
+                filter: drop-shadow(-20px -20px 10px #f8f8f572);
+
+            }
+            50%{
+                transform: rotate(10deg);
+                filter: drop-shadow(-25px -25px 10px #90918b72);
+
+            }
+            75%{
+                transform: rotate(5deg);
+                filter: drop-shadow(-20px -20px 10px #e3ec9272);
+
+            }
+            100%{
+                transform: rotate(-5deg);
+                filter: drop-shadow(-25px -25px 10px #cfd1c072);
+
+            }
+        }
+        .meteor{
+            position: absolute;
+            top: -50px;
+            left: 100px;
+            height: 30px;
+            width: 30px;
+            border-radius: 50%;
+            transform: rotate(-45deg);
+            transform: scale(1);
+            z-index: 3;
+            transition-duration: 13s;
+            animation: meteor-ani 2s linear infinite;
+        }
+        .meteor-action{
+            top: calc(100% + 50px);
+            left: calc(100% + 50px);
+
+        }
+        .circle{
+            border: dashed 1px #f6facf4f;
+            border-radius: 50%;
+            position: absolute;
+            background-color: rgba(67, 62, 51, 0.048);
+            top: 350px;
+            left: 700px;
+            transform: translate(-50%, -50%);
+            z-index: 5;
+        }
+        #div-star1{
+            height: 160px;
+            width: 160px;  
+        }
+
+         #div-star2{
+            height: 230px;
+            width: 230px;  
+        }
+
+        #div-star3{
+            height: 320px;
+            width: 320px;  
+        }
+
+        #div-star4{
+            height: 400px;
+            width: 400px;  
+        }
+
+        #div-star5{
+            height: 500px;
+            width: 500px;  
+        }
+
+        #div-star6{
+            height: 640px;
+            width: 640px;  
+        }
+        #div-star7{
+            height: 760px;
+            width: 760px;  
+        }
+        
+        #div-star8{
+            height: 860px;
+            width: 860px;  
+        } 
+
+    </style>
+</head>
+<body>
+
+    <img id="sun" src="image/sun (1).png" alt="">
+    <img class="planet" id="mercury" src="image/mercury.png" alt="">
+    <img class="planet" id="venus" src="image/venus.png" alt="">
+    <img class="planet" id="earth" src="image/earth.png" alt="">
+    <img class="satellite" id="moon" src="image/full-moon.png" alt="">
+    <img class="planet" id="mars" src="image/mars.png" alt="">
+    <img class="planet" id="jupiter" src="image/jupiter (1).png" alt="">
+    <img class="planet" id="saturn" src="image/saturn.png" alt="">
+    <img class="planet" id="uranus" src="image/uranus (1).png" alt="">
+    <img class="planet" id="neptune" src="image/neptune.png" alt="">
+    <!-- <img class="planet" id="pluto" src="image/pluto.png" alt=""> -->
+    <img class="meteor" src="image/meteor.png"></img>
+    <div class="circle" id="div-star1"></div>
+    <div class="circle" id="div-star2"></div>
+    <div class="circle" id="div-star3"></div>
+    <div class="circle" id="div-star4"></div>
+    <div class="circle" id="div-star5"></div>
+    <div class="circle" id="div-star6"></div>
+    <div class="circle" id="div-star7"></div>
+    <div class="circle" id="div-star8"></div>
+
+
+    <script src="cosmos.js"></script>
+</body>
+</html>
